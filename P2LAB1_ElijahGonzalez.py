@@ -6,11 +6,11 @@
 mpg = float(input("Enter car gas milage: "))
 cpg = float(input("Enter cost per gallon: "))
 #calc cost 20 miles
-mile_cost_20 = (mpg/20)*cpg
+mile_cost_20 = (20/mpg)*cpg
 #calc cost 75 miles
-mile_cost_75 = (mpg/75)*cpg
+mile_cost_75 = (75/mpg)*cpg
 #calc cost 500 miles
-mile_cost_500 = (mpg/500)*cpg
+mile_cost_500 = (500/mpg)*cpg
 #Display Out come
 print(f"Cost for 20 mile: {mile_cost_20:.2f}")
 print(f"Cost for 75 mile: {mile_cost_75:.2f}")
