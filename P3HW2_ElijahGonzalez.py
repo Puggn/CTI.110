@@ -6,7 +6,7 @@
 
 emp_name = input("Enter employee's name: ")
 emp_hours = int(input("Enter nuber of hours worked: "))
-payrate = float(input("Enter employee's pay rate: "))
+emp_pay = float(input("Enter employee's pay rate: "))
 
 print("------------------------------")
 
@@ -22,9 +22,13 @@ else:       #This represents if emp_hours is 40 or less
     reg_hours = emp_hours
 #Calculate pay
 ot_pay = (emp_pay * 1.5) * ot_hours
-reg_pay = (emp_pay *  reg_hours
+reg_pay = emp_pay *  reg_hours
 gross_pay = ot_pay + reg_pay
 
+#Display
+print('Hours Worked  ', 'Pay Rate    ','OverTime    ','OverTime Pay    ', 'RegHour Pay     ', 'Gross Pay')
+print('-----------------------------------------------------------------------------------------------')
+print(f"{emp_hours:<15} {emp_pay:<15} {ot_hours:<15} {ot_pay:<15} {reg_pay:<15} {gross_pay:<15}")
 
     
-                     
+                    
