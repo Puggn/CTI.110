@@ -13,28 +13,15 @@ grades_list = []
 #Get grades from user
 for i in range(num_grades):
     grade = float(input(f"Enter grade for Module {i + 1}: "))
-    grades_list.append(grade)
-
+    while grade < 0 or grade > 100:
+      print("Invalid grade has been entered...")
+      grade = float(input(f"Enter grade for Module {i + 1}: "))
+    else:
+        grades_list.append(grade)
+print("-----------Results-----------")       
 print(grades_list)
-'''
-#Get input from user
-grade_m1 = float(input("Enter grade for Module 1: "))
-grade_m2 = float(input("Enter grade for Module 2: "))
-grade_m3 = float(input("Enter grade for Module 3: "))
-grade_m4 = float(input("Enter grade for Module 4: "))
-grade_m5 = float(input("Enter grade for Module 5: "))
-grade_m6 = float(input("Enter grade for Module 6: "))
+print("-----------Results-----------")  
 
-#adding value to list
-grades_list.append(grade_m1)
-grades_list.append(grade_m2)
-grades_list.append(grade_m3)
-grades_list.append(grade_m4)
-grades_list.append(grade_m5)
-grades_list.append(grade_m6)
-
-#Results table
-print("------------Results------------")
 
 min_grade = min(grades_list)
 max_grade = max(grades_list)
@@ -48,4 +35,3 @@ print("Lowest Grade:",f"{avg_grade:.1f}")
 
 
 print("----------------------------------------")
-'''
